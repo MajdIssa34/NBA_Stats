@@ -13,7 +13,7 @@ public class player {
     private String name;
     private String team;
     private Double age;
-    private String position;
+    private String pos;
     private Integer gp;
     private Double mpg;
     private Double ftpercentage;
@@ -37,7 +37,7 @@ public class player {
         this.name = name;
     }
 
-    public player(Double spg, Double bpg, Double tpg, Double ortg, Double drtg, Double apg, Double rpg, Double trueShoot, Double threept, Double ppg, Double eFg, Double ftpercentage, Double mpg, Integer gp, String position, Double age, String team, String name) {
+    public player(Double spg, Double bpg, Double tpg, Double ortg, Double drtg, Double apg, Double rpg, Double trueShoot, Double threept, Double ppg, Double eFg, Double ftpercentage, Double mpg, Integer gp, String pos, Double age, String team, String name) {
         this.spg = spg;
         this.bpg = bpg;
         this.tpg = tpg;
@@ -52,7 +52,7 @@ public class player {
         this.ftpercentage = ftpercentage;
         this.mpg = mpg;
         this.gp = gp;
-        this.position = position;
+        this.pos = pos;
         this.age = age;
         this.team = team;
         this.name = name;
@@ -90,12 +90,12 @@ public class player {
         this.age = age;
     }
 
-    public String getPosition() {
-        return position;
+    public String getPos() {
+        return pos;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setPos(String pos) {
+        this.pos = pos;
     }
 
     public Double getMpg() {
@@ -115,7 +115,7 @@ public class player {
     }
 
     public Double getThreept() {
-        return threept;
+        return Double.parseDouble(String.format("%.2f", threept * 100));
     }
 
     public void setThreept(Double threept) {
