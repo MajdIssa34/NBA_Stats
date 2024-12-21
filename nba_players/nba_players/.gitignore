@@ -32,11 +32,11 @@ build/
 ### VS Code ###
 .vscode/
 
-nba_players/.idea
-nba_players/nba_players/.mvn
-nba_players/nba_players/src/test
-nba_players/nba_players/target
-nba_players/nba_players/mvnw
-nba_players/nba_players/HELP.md
-nba_players/nba_players/mvnw.cmd
-nba_players/nba_players/pom.xml
+/nba_players/.idea/
+/nba_players/nba_players/.mvn/
+nba_players/nba_players/src/test/
+nba_players/nba_players/target/
+nba_players/nba_players/mvnw/
+nba_players/nba_players/HELP.md/
+nba_players/nba_players/mvnw.cmd/
+nba_players/nba_players/pom.xml/
