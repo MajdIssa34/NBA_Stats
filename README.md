@@ -21,8 +21,8 @@ This is a web application that displays information about NBA players using data
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/nba-stats.git
-cd nba-stats
+git clone https://github.com/MajdIssa34/NBA_Stats.git
+cd NBA_Stats
 ```
 
 ### 2. Backend Setup
