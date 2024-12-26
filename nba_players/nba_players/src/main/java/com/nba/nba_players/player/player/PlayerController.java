@@ -21,6 +21,15 @@ public class PlayerController {
         this.playerService = playerService;
     }
 
+    @GetMapping("/compare")
+    public List<player> comparePlayers(@RequestParam List<String> playerNames) {
+        if (playerNames.isEmpty() || playerNames.size() < 2) {
+            throw new IllegalArgumentException("At least two player names must be provided for comparison.");
+        }
+        return playerService.comparePlayers(playerNames);
+    }
+
+
     @GetMapping
     public List<player> getPlayers(
             @RequestParam(required = false) String team,

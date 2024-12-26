@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Players Stats - Compare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Compare NBA Players</h1>
+        <p>Compare the stats of two NBA players.</p>
+    </header>
+
+    <div class="comparison">
+        <h2>Enter Player Names for Comparison</h2>
+        <form id="comparisonForm">
+            <label for="player1">Player 1</label>
+            <input type="text" id="player1" placeholder="Enter first player's name">
+
+            <label for="player2">Player 2</label>
+            <input type="text" id="player2" placeholder="Enter second player's name">
+
+            <button id="comparePlayers">Compare Players</button>
+        </form>
+    </div>
+
+    <!-- Add Back Button -->
+    <div class="back-button">
+        <a href="filter.html"><button id="backToFilters">Go Back To The Filtering Page</button></a>
+    </div>
+
+    <div id="comparisonResult"></div>
+</div>
+
+<script src="compare.js"></script>
+</body>
+</html>

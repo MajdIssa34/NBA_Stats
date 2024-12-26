@@ -12,15 +12,24 @@ public class PlayerService {
     private final PlayerRepository playerRepository;
 
     @Autowired
-    public PlayerService(PlayerRepository playerRepository){
+    public PlayerService(PlayerRepository playerRepository) {
         this.playerRepository = playerRepository;
     }
 
     // Get all players
-    public List<player> getPlayers(){
+    public List<player> getPlayers() {
         return playerRepository.findAll();
     }
 
+    // Compare players by first name, last name, or any part of their name in a case-insensitive manner
+    public List<player> comparePlayers(List<String> playerNames) {
+        return playerRepository.findAll().stream()
+                .filter(player -> playerNames.stream()
+                        .anyMatch(name -> player.getName().toLowerCase().contains(name.toLowerCase()))) // Case insensitive name matching
+                .collect(Collectors.toList());
+    }
+
+    // Get players by filters
     public List<player> getPlayersByFilters(String team, String name, String position, Double age, Double average, Double threept) {
         return playerRepository.findAll().stream()
                 .filter(player -> (team == null || player.getTeam().equalsIgnoreCase(team)))

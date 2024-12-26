@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Player Stats - Filters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class='container'>
+<!-- Header Section -->
+<header>
+    <h1>NBA Player Stats</h1>
+    <p>Find detailed statistics for NBA players.</p>
+</header>
+
+<!-- Navbar with Compare Players Button -->
+<nav class="navbar2">
+    <button id="comparePlayers">Go To The Comparison Page</button>
+</nav>
+
+<!-- Filters Section -->
+<div class="filters">
+    <h2>Filter Players</h2>
+    <form id="filtersForm">
+        <label for="team">Team:</label>
+        <input type="text" id="team" placeholder="Enter team name">
+
+        <label for="name">Player Name:</label>
+        <input type="text" id="name" placeholder="Enter player name">
+
+        <label for="position">Position:</label>
+        <input type="text" id="position" placeholder="Enter position">
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter age">
+
+        <label for="average">Min. PPG:</label>
+        <input type="number" id="average" step="0.1" placeholder="Enter min. PPG">
+
+        <label for="threept">Min. 3pt%:</label>
+        <input type="number" id="threept" step="0.1" placeholder="Enter min. 3pt%">
+
+        <button id="applyFilters">Apply Filters</button>
+    </form>
+</div>
+
+<!-- Player List Section -->
+<div class="players-list">
+    <!-- Player cards will be rendered here -->
+</div>
+
+<script src="filter.js"></script>
+</div>
+</body>
+</html>

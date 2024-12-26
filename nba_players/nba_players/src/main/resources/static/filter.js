@@ -1,3 +1,8 @@
+// Redirect to compare.html when the "Compare Players" button is clicked
+document.getElementById('comparePlayers').addEventListener('click', function() {
+    window.location.href = 'compare.html'; // Redirect to compare.html
+});
+
 document.getElementById('applyFilters').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent page reload
 
@@ -20,13 +25,10 @@ document.getElementById('applyFilters').addEventListener('click', function(event
     // Remove trailing '&' if any
     query = query.slice(0, -1);
 
-    console.log('Query:', query);  // Log the query to verify it's correct
-
     // Make the fetch request
     fetch(`http://localhost:8090/api/v1/player${query}`)
         .then(response => response.json())
         .then(data => {
-            console.log('Players:', data);
             renderPlayers(data);
         })
         .catch(error => {
@@ -41,7 +43,6 @@ function renderPlayers(players) {
     players.forEach(player => {
         const playerCard = document.createElement('div');
         playerCard.classList.add('player-card');
-
         playerCard.innerHTML = `
             <h3>${player.name}</h3>
             <p>Team: ${player.team}</p>
@@ -50,7 +51,6 @@ function renderPlayers(players) {
             <p>PPG: ${player.ppg}</p>
             <p>3pt%: ${player.threept}</p>
         `;
-
         playersList.appendChild(playerCard);
     });
 }
